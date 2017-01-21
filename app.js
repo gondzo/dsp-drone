@@ -1,4 +1,4 @@
-let gcs = require('./gcs.js');
+// let gcs = require('./gcs.js');
 let express = require('express');
 let bodyParser = require("body-parser");
 let compression = require('compression');
@@ -53,9 +53,9 @@ function main() {
     //     }
     // }, process.env.BACKEND_UPDATE_RATE);
 
-    // app.get('/api/v1', function (req, res) {
-    //     res.json({version: 1.0});
-    // });
+    app.get('/api/v1', function (req, res) {
+        res.json({version: 1.0});
+    });
 
     // app.get('/api/v1/telemetry/:stream', function (req, res) {
     //     let response;
