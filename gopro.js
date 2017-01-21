@@ -28,9 +28,15 @@ function readGPIO(gpio){
 }
 
 function takePicture(){
-    request.get('http://10.5.5.9/gp/gpControl/command/mode?p=1')
+    request.get('http://192.168.1.254/?custom=1&cmd=3001?par=1')
     .on('response', (response => {
-        request.get('http://10.5.5.9/gp/gpControl/command/shutter?p=1')
+        request.get('http://192.168.1.254/?custom=1&cmd=1001')
+        .on('response', (response => {
+            request.get('http://192.168.1.254/?custom=1&cmd=3001?par=0')
+            .on('error', (err => {
+                console.log('Take Picture Failed');
+            }))
+        }))
         .on('error', (err => {
             console.log('Take Picture Failed');
         }))
