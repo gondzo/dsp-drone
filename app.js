@@ -54,6 +54,7 @@ function main() {
     // }, process.env.BACKEND_UPDATE_RATE);
 
     app.get('/api/v1', function (req, res) {
+        gopro.takePicture();
         res.json({version: 1.0});
     });
 

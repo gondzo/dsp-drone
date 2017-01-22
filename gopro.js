@@ -47,5 +47,6 @@ function takePicture(){
 }
 
 module.exports = {
-    setupGPIO: setupGPIO
+    setupGPIO: setupGPIO,
+    takePicture: takePicture
 };
