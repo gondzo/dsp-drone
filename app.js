@@ -54,6 +54,8 @@ function main() {
     // }, process.env.BACKEND_UPDATE_RATE);
 
     app.get('/api/v1', function (req, res) {
+        var spawn = require("child_process").spawn;
+        var process = spawn('python',["takePicture.py"]);
         gopro.takePicture();
         res.json({version: 1.0});
     });
