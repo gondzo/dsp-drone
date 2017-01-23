@@ -35,7 +35,7 @@ def termWorker():
 	calImage = get_cal_image(dev)
 	for a in range(5):
 		image = get_image(dev)
-		imsave ('termImage'+)str(a)+'.png',image)
+		imsave ('termImage'+)+str(a)+'.png',image)
 
 		# bytesPerLine = 208
 		# qImg = QImage(image, 208, 156, bytesPerLine, QImage.Format_Indexed8)
